@@ -1,0 +1,283 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* qunar_stockreport
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-25 12:10+0000\n"
+"PO-Revision-Date: 2018-09-25 12:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: qunar_stockreport
+#: selection:qunar.report.stock.wizard,method:0
+msgid "Average"
+msgstr "平均"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_search_view
+msgid "Category"
+msgstr "产品分类"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: qunar_stockreport
+#: code:addons/qunar_stockreport/qunar_report_stock.py:27
+#: selection:qunar.report.stock.wizard,usage:0
+#, python-format
+msgid "Custom"
+msgstr "自定义"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_date_start
+msgid "Date Start"
+msgstr "开始日期"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_date_stop
+msgid "Date Stop"
+msgstr "结束日期"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,help:qunar_stockreport.field_qunar_report_stock_line_uom
+msgid "Default Unit of Measure used for all stock operation."
+msgstr "所有库存操作的默认计量单位"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_display_name
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: qunar_stockreport
+#: code:addons/qunar_stockreport/qunar_report_stock.py:40
+#, python-format
+msgid "Error!"
+msgstr "错误！"
+
+#. module: qunar_stockreport
+#: selection:qunar.report.stock.wizard,method:0
+msgid "FIFO"
+msgstr "先进先出"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_search_view
+msgid "Group by..."
+msgstr "分组..."
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_id
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_in_stock_amt
+msgid "In Stock Amount"
+msgstr "入库金额"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_in_stock_qty
+msgid "In Stock Quantity"
+msgstr "入库数量"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_last_amt
+msgid "Init Amount"
+msgstr "期初金额"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_last_remainder
+msgid "Init Qty"
+msgstr "期初数量"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_over_amt
+msgid "Inventory Over Amount"
+msgstr "盘盈金额"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_over_qty
+msgid "Inventory Over Quantity"
+msgstr "盘盈数量"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_short_amt
+msgid "Inventory Short Amount"
+msgstr "盘亏金额"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_short_qty
+msgid "Inventory Short Quantity"
+msgstr "盘亏数量"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line___last_update
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard___last_update
+msgid "Last Modified on"
+msgstr "最近修改日期"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_stock_location
+msgid "Location"
+msgstr "库位"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_method
+msgid "Method"
+msgstr "方法"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_search_view
+msgid "None Zero"
+msgstr "非零数据"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_out_stock_amt
+msgid "Out Stock Amount"
+msgstr "出库金额"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_out_stock_qty
+msgid "Out Stock Quantity"
+msgstr "出库数量"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_period
+#: selection:qunar.report.stock.wizard,usage:0
+msgid "Period"
+msgstr "期间"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_product_id
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_search_view
+msgid "Product"
+msgstr "产品"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_product_cate
+msgid "Product Category"
+msgstr "产品分类"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_graph_view
+msgid "Purchase Orders Statistics"
+msgstr "采购订单明细分析"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_wizard_view
+msgid "Query"
+msgstr "查询"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_line_tree_view
+msgid "Qunar Report Stock Line"
+msgstr "进销存报表"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_wizard_view
+msgid "Qunar Report Stock Wizard"
+msgstr "进销存报表向导"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_remainder_amt
+msgid "Remainder Amount"
+msgstr "结存金额"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_remainder_qty
+msgid "Remainder Qty"
+msgstr "结存数量"
+
+#. module: qunar_stockreport
+#: model:ir.ui.menu,name:qunar_stockreport.qunar_report
+msgid "Report"
+msgstr "报表"
+
+#. module: qunar_stockreport
+#: code:addons/qunar_stockreport/qunar_report_stock.py:40
+#, python-format
+msgid "Scrapped Location Doesn't Exists!"
+msgstr "盘盈盘亏库位不存在！"
+
+#. module: qunar_stockreport
+#: model:ir.ui.menu,name:qunar_stockreport.qunar_report_stock
+msgid "Stock Report"
+msgstr "进销存报表"
+
+#. module: qunar_stockreport
+#: code:addons/qunar_stockreport/qunar_report_stock.py:331
+#, python-format
+msgid "Stock Report "
+msgstr "进销存报表"
+
+#. module: qunar_stockreport
+#: model:ir.actions.act_window,name:qunar_stockreport.action_qunar_report_stock_wizard
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_wizard_view
+msgid "Stock Report Wizard"
+msgstr "进销存报表向导"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_uom
+msgid "Unit of Measure"
+msgstr "计量单位"
+
+#. module: qunar_stockreport
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_wizard_usage
+msgid "Usage"
+msgstr "用途"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_wizard_view
+msgid "cancel"
+msgstr "取消"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_wizard_view
+msgid "or"
+msgstr "或"
+
+#. module: qunar_stockreport
+#: model:ir.model,name:qunar_stockreport.model_qunar_report_stock_line
+msgid "qunar.report.stock.line"
+msgstr "qunar.report.stock.line"
+
+#. module: qunar_stockreport
+#: model:ir.model,name:qunar_stockreport.model_qunar_report_stock_wizard
+msgid "qunar.report.stock.wizard"
+msgstr "qunar.report.stock.wizard"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_search_view
+msgid "search report"
+msgstr "搜索视图"
+
+#. module: qunar_stockreport
+#: model:ir.ui.view,arch_db:qunar_stockreport.qunar_report_stock_line_tree_view
+msgid "total"
+msgstr "总计"
+
