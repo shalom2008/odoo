@@ -19,23 +19,23 @@
 from odoo import fields,api,models,_
 from odoo import tools
 from odoo.exceptions import except_orm, UserError
-from datetime import datetime
+
 
 class qunar_report_stock_wizard(models.Model):
     _name = "qunar.report.stock.wizard"
 
-    usage = fields.Selection([('period','Period'),('custom',_('Custom'))], string='Usage', default="period")
+    usage = fields.Selection([('custom',_('Custom'))], string='Usage', default="custom")
     period = fields.Many2one('account.period',string='Period')
     date_start = fields.Date(string='Date Start')
-    date_stop = fields.Date(string='Date Stop', default=lambda self: datetime.strftime(datetime.now(),'%Y-%m-%d'))
-    stock_location = fields.Many2one('stock.location', string='Location',required=True)
+    date_stop = fields.Date(string='Date Stop', default=fields.Datetime.now)
+    stock_location = fields.Many2one('stock.location', string='Location',required=True, domain=[('usage', '=', 'internal')])
     method = fields.Selection([('average','Average'),('fifo','FIFO')], string="Method", default="average")
 
     # @api.cr_uid_ids_context
     def btn_query(self):
         self.ensure_one()
-        #get inventory location
-        scrapped_ids = self.env["stock.location"].search([('usage','=','inventory')])
+        #get internal location
+        scrapped_ids = self.env["stock.location"].search([('usage', '=', 'internal')])
         if not len(scrapped_ids):
             raise except_orm(_('Error!'),_("Scrapped Location Doesn't Exists!"))
 
@@ -64,10 +64,10 @@ class qunar_report_stock_wizard(models.Model):
             (case when i.amt is null then 0 else i.amt end)+(case when pi.amt is null then 0 else pi.amt end) as in_stock_amt,
             (case when o.qty is null then 0 else o.qty end)+(case when po.qty is null then 0 else po.qty end) as out_stock_qty,
             (case when o.amt is null then 0 else o.amt end)+(case when po.amt is null then 0 else po.amt end) as out_stock_amt,
-            case when pi.qty is null then 0 else pi.qty end as inventory_over_qty,
-            case when pi.amt is null then 0 else pi.amt end as inventory_over_amt,
-            case when po.qty is null then 0 else po.qty end as inventory_short_qty,
-            case when po.amt is null then 0 else po.amt end as inventory_short_amt,
+            case when pi.qty is null then 0 else pi.qty end as internal_over_qty,
+            case when pi.amt is null then 0 else pi.amt end as internal_over_amt,
+            case when po.qty is null then 0 else po.qty end as internal_short_qty,
+            case when po.amt is null then 0 else po.amt end as internal_short_amt,
             lt.remainder_qty+(case when i.qty is null then 0 else i.qty end)+(case when pi.qty is null then 0 else pi.qty end)-(case when o.qty is null then 0 else o.qty end)-(case when po.qty is null then 0 else po.qty end) as remainder_qty,
             lt.remainder_amt+(case when i.amt is null then 0 else i.amt end)+(case when pi.amt is null then 0 else pi.amt end)-(case when o.amt is null then 0 else o.amt end)-(case when po.amt is null then 0 else po.amt end) as remainder_amt
             from product_product t
@@ -196,10 +196,10 @@ class qunar_report_stock_wizard(models.Model):
             (case when i.qty*ppl.price is null then 0 else i.qty*ppl.price end) as in_stock_amt,
             (case when o.qty is null then 0 else o.qty end) as out_stock_qty,
             (case when o.qty*ppl.price is null then 0 else o.qty*ppl.price end) as out_stock_amt,
-            case when pi.qty is null then 0 else pi.qty end as inventory_over_qty,
-            case when pi.qty*ppl.price is null then 0 else pi.qty*ppl.price end as inventory_over_amt,
-            case when po.qty is null then 0 else po.qty end as inventory_short_qty,
-            case when po.qty*ppl.price is null then 0 else po.qty*ppl.price end as inventory_short_amt,
+            case when pi.qty is null then 0 else pi.qty end as internal_over_qty,
+            case when pi.qty*ppl.price is null then 0 else pi.qty*ppl.price end as internal_over_amt,
+            case when po.qty is null then 0 else po.qty end as internal_short_qty,
+            case when po.qty*ppl.price is null then 0 else po.qty*ppl.price end as internal_short_amt,
             lt.remainder_qty+(case when i.qty is null then 0 else i.qty end)-(case when o.qty is null then 0 else o.qty end) as remainder_qty,
             lt.remainder_qty*ppl.price+(case when i.qty*ppl.price is null then 0 else i.qty*ppl.price end)-(case when o.qty*ppl.price is null then 0 else o.qty*ppl.price end) as remainder_amt
             from product_product t
@@ -350,10 +350,10 @@ class qunar_report_stock_line(models.Model):
     in_stock_amt = fields.Float('In Stock Amount')
     out_stock_qty = fields.Float('Out Stock Quantity')
     out_stock_amt = fields.Float('Out Stock Amount')
-    inventory_short_qty = fields.Float('Inventory Short Quantity')
-    inventory_short_amt = fields.Float('Inventory Short Amount')
-    inventory_over_qty = fields.Float('Inventory Over Quantity')
-    inventory_over_amt = fields.Float('Inventory Over Amount')
+    internal_short_qty = fields.Float('internal Short Quantity')
+    internal_short_amt = fields.Float('internal Short Amount')
+    internal_over_qty = fields.Float('internal Over Quantity')
+    internal_over_amt = fields.Float('internal Over Amount')
     remainder_qty = fields.Float('Remainder Qty')
     remainder_amt = fields.Float('Remainder Amount')
 
