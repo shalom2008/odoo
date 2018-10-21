@@ -17,11 +17,11 @@
 ##############################################################################
 
 {
-	'name':"Stock Report",
-	"author":"Kevin Kong,碎石头(360026606@qq.com),广州救火(7017511@qq.com)",
-	"version":"10.0.2.0",
-	'depends':['stock'],
-	"description":
+    'name':"Stock Report",
+    "author":"Kevin Kong,碎石头(360026606@qq.com),广州救火(7017511@qq.com)",
+    "version":"10.0.2.0",
+    'depends':['stock'],
+    "description":
 u"""
 进销存报表
 ===========================
@@ -33,11 +33,11 @@ u"""
 现已开源，助力Odoo中国社区的发展。
 如果有好的建议和疑问，欢迎电邮 kfx2007@163.com 或 QQ群：56721527
 """,
-	"category":"stock",
-	"installable":True,
-	'application':True,
-	"data":[
-		"security/ir.model.access.csv",
-		"qunar_report_stock_view.xml"
-		],
+    "category":"stock",
+    "installable":True,
+    'application':True,
+    "data":[
+        "security/ir.model.access.csv",
+        "qunar_report_stock_view.xml"
+        ],
 }
