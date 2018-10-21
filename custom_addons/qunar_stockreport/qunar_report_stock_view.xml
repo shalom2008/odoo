@@ -54,10 +54,10 @@
 					<field name="in_stock_amt" sum="total" groups="stock.group_stock_manager"/>
 					<field name="out_stock_qty" sum="total"/>
 					<field name="out_stock_amt" sum="total" groups="stock.group_stock_manager"/>
-					<field name="inventory_short_qty" invisible="1"/>
-					<field name="inventory_short_amt" invisible="1" groups="stock.group_stock_manager"/>
-					<field name="inventory_over_qty" invisible="1"/>
-					<field name="inventory_over_amt" invisible="1" groups="stock.group_stock_manager"/>
+					<field name="internal_short_qty" invisible="1"/>
+					<field name="internal_short_amt" invisible="1" groups="stock.group_stock_manager"/>
+					<field name="internal_over_qty" invisible="1"/>
+					<field name="internal_over_amt" invisible="1" groups="stock.group_stock_manager"/>
 					<field name="remainder_qty" sum="total"/>
 					<field name="remainder_amt" sum="total" groups="stock.group_stock_manager"/>
 				</tree>
@@ -83,7 +83,7 @@
 			<field name="arch" type="xml">
 				<search string="search report">
 					<field name="product_id" string="Product" filter_domain="['|',('product_id.default_code','ilike',self),('product_id.name','ilike',self)]"/>
-					<filter string="None Zero" domain="['|','|',('last_remainder','!=',0),('in_stock_qty','!=',0),'|','|',('out_stock_qty','!=',0),('inventory_short_qty','!=',0),('inventory_over_qty','!=',0)]"/>
+					<filter string="None Zero" domain="['|','|',('last_remainder','!=',0),('in_stock_qty','!=',0),'|','|',('out_stock_qty','!=',0),('internal_short_qty','!=',0),('internal_over_qty','!=',0)]"/>
 					<group expand="0" string="Group by...">
 						<filter string="Category" domain="[]" context="{'group_by':'product_cate'}"/>
 					</group>

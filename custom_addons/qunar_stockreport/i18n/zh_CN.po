@@ -106,23 +106,23 @@ msgid "Init Qty"
 msgstr "期初数量"
 
 #. module: qunar_stockreport
-#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_over_amt
-msgid "Inventory Over Amount"
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_internal_over_amt
+msgid "Internal Over Amount"
 msgstr "盘盈金额"
 
 #. module: qunar_stockreport
-#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_over_qty
-msgid "Inventory Over Quantity"
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_internal_over_qty
+msgid "Internal Over Quantity"
 msgstr "盘盈数量"
 
 #. module: qunar_stockreport
-#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_short_amt
-msgid "Inventory Short Amount"
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_internal_short_amt
+msgid "Internal Short Amount"
 msgstr "盘亏金额"
 
 #. module: qunar_stockreport
-#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_inventory_short_qty
-msgid "Inventory Short Quantity"
+#: model:ir.model.fields,field_description:qunar_stockreport.field_qunar_report_stock_line_internal_short_qty
+msgid "Internal Short Quantity"
 msgstr "盘亏数量"
 
 #. module: qunar_stockreport
