@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+
+
         <template id="assets_backend" name="base_single_login" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
                 <script type="text/javascript" src="/base_single_login/static/js/single_login.js"></script>
             </xpath>
         </template>
+
 
         <record id="view_general_configuration_login" model="ir.ui.view">
             <field name="name">view_general_configuration_login</field>
@@ -22,5 +25,8 @@
                 </xpath>
             </field>
         </record>
+
+
+
     </data>
 </odoo>
