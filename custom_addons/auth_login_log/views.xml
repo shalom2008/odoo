@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="bill_list_view">
+            <field name="name">Auth Logs List View</field>
+            <field name="model">auth_login_log.log</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="login_account"/>
+                    <field name="login_user"/>
+                    <field name="login_ip"/>
+                    <field name="login_time"/>
+                    <field name="login_status"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="bill_search_view">
+            <field name="name">Auth Logs search View</field>
+            <field name="model">auth_login_log.log</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="login_account"/>
+                    <filter name="success" domain="[('login_status', '=', 's')]"/>
+                    <filter name="error" domain="[('login_status', '=', 'e')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="auth_log_list_action">
+            <field name="name">Auth Logs</field>
+            <field name="res_model">auth_login_log.log</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_error': 1}</field>
+        </record>"
+
+        <menuitem id="auth_log" name="Auth Log" parent="base.menu_custom"/>
+        <menuitem id="auth_log_log" name="Log" parent="auth_log" action="auth_log_list_action"/>
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+
+        <template id="assets_backend" name="base_single_login" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/base_single_login/static/js/single_login.js"></script>
+            </xpath>
+        </template>
+
+
+        <record id="view_general_configuration_login" model="ir.ui.view">
+            <field name="name">view_general_configuration_login</field>
+            <field name="model">base.config.settings</field>
+            <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@name='email_label']" position='before'>
+                    <label for="once_login" string="单次登陆"/>
+                        <div name="单次登陆">
+                            <field name="once_login" class="oe_inline"/>
+                            <label for="once_login"/>
+                        </div>
+
+                </xpath>
+            </field>
+        </record>
+
+
+
+    </data>
+</openerp>
