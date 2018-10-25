@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 # Auth: Gavin GU Email:guwenfengvip@163.com
 {
-    'name': '单点登录',
+    'name': 'single login',
     'category': 'web',
     'summary': '帐号只允许一次登录',
 
